@@ -1,6 +1,7 @@
 
 html{
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(31, 31, 31);
+    scroll-behavior: smooth;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -34,7 +35,8 @@ header{
     color: azure;
     top: 250px;
     left: 37%;
-    
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.445);
 }
 
 .header_Name{
@@ -79,9 +81,9 @@ header{
 .nav_Menu{
     position: fixed;
     top: 0;
-    left: -350px;
+    left: -300px;
     height: 100%;
-    width: 350px;
+    width: 300px;
     z-index: 90;
     display: flex;
     background-color: rgba(60, 68, 144, 0.801);
@@ -124,6 +126,7 @@ header{
     background-color: rgb(31, 31, 31);
     color: wheat;
     font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
 }
 .img_Container{
     width: 200px;
@@ -171,9 +174,9 @@ header{
 
 
 footer{
-    
-    padding-bottom: 5px;
-    background-color: rgb(31, 30, 30);
+    margin-top: 15px;
+    /* padding-bottom: 5px; */
+    background-color: rgb(31, 31, 31);
     font-family: 'Times New Roman', Times, serif;
 }
 .icons_Container{
@@ -182,13 +185,13 @@ footer{
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: stretch;
 }
 .icon_btn{
     width: 50px;
-    color: blanchedalmond;
+    color: rgb(255, 255, 255);
 }
 .span_Icon{
     display: flex;
@@ -233,7 +236,7 @@ footer{
 }
 @keyframes bar_Slide_Show {
     0%{
-        left:-350px;
+        left:-300px;
     }
     100%{
         left: 0;
@@ -244,40 +247,26 @@ footer{
         left:0;
     }
     100%{
-        left: -350px;
+        left: -300px;
     }
 }
 
-@keyframes image_lighting {
+
+
+@keyframes btn_Slide_Show {
     0%{
-        opacity: 1;
-    }
-    24%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.5;
-    }
-    27%{
-        opacity: 1;
-    }
-    48%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.7;
-    }
-    52%{
-        opacity: 1;
-    }
-    65%{
-        opacity: 0.9;
-    }
-    80%{
-        opacity: 0.7;
+        left:0;
     }
     100%{
-        opacity: 1;
+        left:300px;
+    }
+}
+@keyframes btn_Slide_Hide {
+    0%{
+        left:300px;
+    }
+    100%{
+        left:0;
     }
 }
 
@@ -307,7 +296,7 @@ footer{
     }
     .my_Profile{
         height: 300px;
-        padding: 1px;
+        padding: 5%;
     }
     .img_Container {
         width: 150px;
@@ -331,5 +320,7 @@ footer{
         width: 30px;
         height: 30px;
     }
-    
+    .icon_Text{
+        font-size: 10px;
+    }
 }

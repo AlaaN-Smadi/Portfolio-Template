@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Styles/reset.css">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/feilds.css">
+    <link rel="stylesheet" href="./Styles/card.css">
     <title> Ala'a Smadi </title>
 </head>
 
@@ -26,24 +28,29 @@
         <div id="bar_btn" class="nav_Btns">
             <span id="show">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
             </span>
             <span id="hide">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                    <path fill-rule="evenodd"
+                        d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                </svg>
             </span>
-            
+
         </div>
         <div id="bar" class="nav_Menu">
             <div id="resume_btn" class="bar_Items">
-                <a target="null" href="https://drive.google.com/file/d/1FqJhS8mVh1SBJtaJ4xKaOTfV8dW6S_tt/view?usp=sharing"> Resume </a>
+                <a target="blank"
+                    href="https://drive.google.com/file/d/1FqJhS8mVh1SBJtaJ4xKaOTfV8dW6S_tt/view?usp=sharing"> Resume
+                </a>
             </div>
-            
+
             <div class="bar_Items">
                 <a href="#my_Profile"> About Me </a>
             </div>
@@ -70,7 +77,7 @@
         </div>
 
         <div id="my_Profile" class="my_Profile">
-            <p class="info_P"> I am 24 years old, single Jordanian who is social , ambitious and result oriented . I am ready to face challenges to build great accomplishments in my career .I am hard worker, dynamic and organized person with ability to learn and adopt any environment to achieve my goals , Born in a small town in Northern Jordan, where I study to be a full stack developer for Instant Domain Search, alongside my many ongoing projects. I love to create and tend to keep a few too many projects on the go at a time. I love to travel . I dream of being able to take my work with me while travelling the world. </p>
+
         </div>
     </header>
 
@@ -81,36 +88,27 @@
     <main>
         <div class="contact_Feild">
             <div class="img_Container">
-                <img src="https://www.arabworldbooks.com/uploads/2020/01/1579556318.jpg" alt="profile">
+                <img id="myProfileImage" src="https://www.arabworldbooks.com/uploads/2020/01/1579556318.jpg" alt="profile">
             </div>
 
             <div id="contact_Me" class="contactInfo_Container">
-                <p class="head_OF_Feilds"> <b> Contact Me </b> </p>
-
-                <p class="info_P"> Phone: +962787189817 </p>
-                <p class="info_P"> Email: alaasmadi1010@gmail.com </p>
-                <p class="info_P"> Address: Jordan / Amman </p>
-
+                <!-- this feild will be rendered from JS file -->
             </div>
         </div>
 
-        <div id="experiance" class="experiance_Feild">
-            <hr class="cross_Line" />
+        <div id="experiance" class="feild">
             <!-- this feild will be rendered from JS file -->
         </div>
 
-        <div id="education" class="education_Feild">
-            <hr class="cross_Line" />
+        <div id="education" class="feild">
             <!-- this feild will be rendered from JS file -->
         </div>
 
-        <div id="projects" class="projects_Feild">
-            <hr class="cross_Line" />
+        <div id="projects" class="feild">
             <!-- this feild will be rendered from JS file -->
         </div>
 
-        <div id="skills" class="skills_Feild">
-            <hr class="cross_Line" />
+        <div id="skills" class="feild">
             <!-- this feild will be rendered from JS file -->
         </div>
 
@@ -119,8 +117,9 @@
 
     <footer>
         <div class="icons_Container">
-
-            <span class="span_Icon">
+            
+            <!-- GitHub -->
+            <span id="gitHubLink" class="span_Icon">
                 <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                     class="bi bi-github" viewBox="0 0 16 16">
                     <path
@@ -128,8 +127,8 @@
                 </svg>
                 <p class="icon_Text"> GitHub Profile </p>
             </span>
-
-            <span  class="span_Icon">
+            <!-- LinkedIn -->
+            <span id="linkedInLink" class="span_Icon">
                 <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                     class="bi bi-linkedin" viewBox="0 0 16 16">
                     <path
@@ -137,22 +136,33 @@
                 </svg>
                 <p class="icon_Text"> LinkedIn Profile </p>
             </span>
-
-            <span class="span_Icon">
-                <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-stack-overflow" viewBox="0 0 16 16">
-                    <path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
-                    <path
-                        d="M3.857 13.145h7.137v-1.428H3.857v1.428zM10.254 0 9.108.852l4.26 5.727 1.146-.852L10.254 0zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
-                </svg>
-                <p class="icon_Text"> Stack Overflow Profile </p>
+            <!-- Twitter -->
+            <span id="twitterLink" class="span_Icon">
+                <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg>
+                <p class="icon_Text"> Twitter Profile </p>
             </span>
-
-            <span class="span_Icon">
+            <!-- YouTube -->
+            <span id="youTubeLink" class="span_Icon">
+                <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                  </svg>
+                <p class="icon_Text"> YouTube Channel </p>
+            </span>
+            <!-- CodePen -->
+            <span id="codePenLink" class="span_Icon">
                 <img class="icon_btn" src="https://icon-library.com/images/codepen-icon/codepen-icon-26.jpg" />
                 <p class="icon_Text"> CodePen Profile </p>
             </span>
-            
+            <!-- Facebook -->
+              <span id="faceBookLink" class="span_Icon">
+                <svg class="icon_btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg>
+                <p class="icon_Text"> FaceBook Profile </p>
+            </span>
+
         </div>
 
         <div class="last_Line_Container">
@@ -161,7 +171,8 @@
     </footer>
 
 
-    <script src="./app.js"> </script>
+    <script src="./JS_Files/app.js"> </script>
+    <script src="./JS_Files/myDataRendering.js"> </script>
 </body>
 
 </html>
