@@ -18,6 +18,7 @@
 }
 .rightDiv{
     width: 70%;
+    min-width: 310px;
 }
 .projects_Container{
     width: 70%;
@@ -61,4 +62,38 @@
 
 .contact-Data{
     margin-top: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .feild {
+        padding: 10px;
+        margin: 7.5px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+@media screen and (max-width:550px) {
+    .feild{
+        padding: 1px;
+        margin: 3px;
+
+    }
+    .rightDiv {
+        width: 90%;
+        padding: 1px;
+        
+    }
+    .projects_Container{
+        width: 85%;
+    }
+    .company{
+        font-size: large;
+    }
+    .position_With_Date{
+        font-size: 18px;
+    }
+    .head_OF_Feilds{
+        font-size: x-large;
+        width: 125px;
+    }
 }

@@ -17,17 +17,12 @@ html{
 
 header{
     position: relative;
-    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
+    margin-bottom: -3px;
 }
 
 .back_header_img{
     width: 100%;
-    /* min-width: 400px; */
-    animation-name: image_lighting;
-    animation-duration: 2s;
+    min-height: 550px;
 }
 
 .personal_Name_Container{
@@ -304,12 +299,16 @@ footer{
 }
 
 @media screen and (max-width:700px){
-    header{
-        height: 475px;
+    
+    .my_Profile{
+        height: 310px;
+        padding: 5%;
+        font-size: medium;
+        
     }
     .personal_Name_Container{
         top: 30px;
-        left: 30%;
+        left: 27%;
     }
     .header_Job{
         font-size: 20px;
@@ -323,4 +322,5 @@ footer{
     .icon_Text{
         font-size: 10px;
     }
+    
 }
