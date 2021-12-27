@@ -1,8 +1,5 @@
 'use strict';
 
-
-
-// info_P
 // take elements from HTML file ==>
 let my_Profile = document.getElementById("my_Profile"),
     contact_Me = document.getElementById("contact_Me"),
@@ -16,108 +13,49 @@ let my_Profile = document.getElementById("my_Profile"),
     gitHubLink = document.getElementById("gitHubLink"),
     linkedInLink = document.getElementById("linkedInLink"),
     faceBookLink = document.getElementById("faceBookLink"),
-    my_Image = document.getElementById("myProfileImage")
+    my_Image = document.getElementById("myProfileImage"),
+    personal_Name = document.getElementById("personal_Name"),
+    personal_Job = document.getElementById("personal_Job")
 
-// image name
-let my_Image_Name = 'alaa.png';
-my_Image.setAttribute('src', `./assets/${my_Image_Name}`);
-// links
-let link_Arr = [
-    {
-        type: 'LinkedIn',
-        link: "https://www.linkedin.com/in/alaa-smadi/"
-    },
-    {
-        type: 'GitHub',
-        link: "https://github.com/AlaaN-Smadi"
-    },
-    {
-        type: 'Twitter',
-        link: ""
-    },
-    {
-        type: 'FaceBook',
-        link: ""
-    },
-    {
-        type: 'CodePen',
-        link: "https://codepen.io/alaan-smadi/projects/"
-    },
-    {
-        type: 'YouTube',
-        link: ""
+
+    // this array for all data needed to render your portfolio
+let myData;
+let myDataJson = './json_files/myData.json';
+
+let link_Arr;
+let link_Arr_JSON = './json_files/links_Arr.json';
+
+function readTextFile(file, type) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                if (type == 'data') {
+                    var allText = rawFile.responseText;
+                    myData = (JSON.parse(allText));
+                } else if (type == 'links') {
+                    var allText = rawFile.responseText;
+                    link_Arr = (JSON.parse(allText));
+                }
+
+            }
+        }
     }
-];
-// this array for all data needed to render your portfolio
-let myData = [
-    {
-        // Contact info => each object contain one key and value
-        head: "Contact",
-        data: [{ Phone: "+962787189817" }, { Email: "alaasmadi1010@gmail.com" }, { Address: "Jordan / Amman" }]
-    },
-    {
-        // Profile is a short leter about you to attract and take the attention of hiring manager
-        head: "Profile",
-        data: "I am 24 years old, single Jordanian who is social , ambitious and result oriented . I am ready to face challenges to build great accomplishments in my career .I am hard worker, dynamic and organized person with ability to learn and adopt any environment to achieve my goals , Born in a small town in Northern Jordan, where I study to be a full stack developer for Instant Domain Search, alongside my many ongoing projects. I love to create and tend to keep a few too many projects on the go at a time. I love to travel . I dream of being able to take my work with me while travelling the world. "
-    },
-    {
-        // your work history right here, make sure to make every object contain all data with the same range
-        // don't forget to make your work history ranged progressive where newest are in the top and oldest are in the bottom 
-        head: "Experiance",
-        data: [
-            {
-                Position: "Test Position",
-                Company: "Test Company",
-                StartDate: "Jan 2020",
-                EndDate: "Jan 2021",
-                TechnichalSkills: "Test Position Skills",
-                Description: "Test position Description"
-            },
-            {
-                Position: "Test Position 2",
-                Company: "Test Company 2",
-                StartDate: "Jan 2020",
-                EndDate: "Jan 2021",
-                TechnichalSkills: "Test Position Skills 2",
-                Description: "Test position Description 2"
-            }
-        ]
-    },
-    {
-        // your studying history right here, make sure to make every object contain all data with the same range
-        // your history should be the same of experiance and work history, newest in the top and oldest in the bottom
-        head: "Education",
-        data: [
-            {
-                Degree: " Survey ",
-                School: "BAU",
-                StartDate: "Jan 2015",
-                EndDate: "Jan 2020",
-                TechnichalSkills: "Nothing",
-                Description: "Description"
-            }
-        ]
-    },
-    {
-        // If you have personal project this will be your area, give a great clear description 
-        // It will be great and powerful if you put the for your project, if not; no worry about that
-        head: "Projects",
-        data: [{ Name: "Project 1",Image:"https://www.gardendesign.com/pictures/images/675x529Max/site_3/helianthus-yellow-flower-pixabay_11863.jpg", Link: "https://getbootstrap.com/docs/5.0/components/card/", Description: "Description 1" }, { Name: "Project 2",Image:"https://addons-media.operacdn.com/media/CACHE/images/themes/95/78195/1.0-rev1/images/f1b54fe9-e138-44e6-929b-182bb1e82a68/e692a2c2fe07202eda545c69833230bd.jpg", Link: "https://alaa-s-resume.netlify.app/", Description: "Description 2" }]
-    },
-    {
-        // Your skills will be as elements in an array 
-        // make sure to add all of your skills with any range you want 
-        head: "Skills",
-        data: [{skillName:'skill 1',percentage:70}, {skillName:'skill 2',percentage:67}, {skillName:'skill 3',percentage:35}]
-    },
-
-]
+    rawFile.send(null);
+}
+readTextFile(myDataJson, 'data')
+readTextFile(link_Arr_JSON, 'links')
 
 
 // => Functionality <=
 
 myData.forEach(mainFeild => {
     switch (mainFeild.head) {
+        case "Personal":
+            personal_Name.textContent = mainFeild.Name;
+            personal_Job.textContent = mainFeild.Job
+            break;
         // profile part
         case "Profile":
             let profile_P = document.createElement("p");
@@ -262,24 +200,24 @@ myData.forEach(mainFeild => {
             mainFeild.data.forEach(pro => {
                 let dataContainer = document.createElement("div");
                 dataContainer.setAttribute("class", 'project_Card');
-                
+
                 let projectFront = document.createElement('div');
-                projectFront.setAttribute('class','project_Front');
+                projectFront.setAttribute('class', 'project_Front');
                 dataContainer.appendChild(projectFront);
-                
+
                 let projectBack = document.createElement('div');
-                projectBack.setAttribute('class','project_BackGround');
+                projectBack.setAttribute('class', 'project_BackGround');
                 dataContainer.appendChild(projectBack);
-                
+
                 // projects
                 let project_ToBeRendered = document.createElement("p");
                 project_ToBeRendered.setAttribute("class", "company");
                 project_ToBeRendered.textContent = pro.Name;
 
                 let myProjectImage = document.createElement('img');
-                myProjectImage.setAttribute('alt','Project_Img');
-                myProjectImage.setAttribute('class','Project_Img');
-                myProjectImage.setAttribute('src',`${pro.Image}`);
+                myProjectImage.setAttribute('alt', 'Project_Img');
+                myProjectImage.setAttribute('class', 'Project_Img');
+                myProjectImage.setAttribute('src', `${pro.Image}`);
 
                 let projectLink_ToBeRendered = document.createElement("p");
                 projectLink_ToBeRendered.setAttribute("class", "Pro-Link");
@@ -294,8 +232,8 @@ myData.forEach(mainFeild => {
                 projectFront.appendChild(projectLink_ToBeRendered);
                 projectFront.appendChild(projectDesc_ToBeRendered);
 
-                
-                dataContainer.addEventListener('click', function(){
+
+                dataContainer.addEventListener('click', function () {
                     location.href = pro.Link;
                 })
                 rightDivPro.appendChild(dataContainer)
@@ -331,7 +269,14 @@ myData.forEach(mainFeild => {
 //  Set Links To be work
 let linksHTML_el = [linkedInLink, gitHubLink, twitterLink, faceBookLink, codePenLink, youTubeLink];
 link_Arr.forEach((linkObj, idx) => {
-    
+    if (linkObj.type == "Resume") {
+        // resume link =>
+        let resumeLink = document.getElementById('resumeLink');
+        resumeLink.setAttribute('href', linkObj.link);
+    } else if (linkObj.type == "Image") {
+        // image name
+        my_Image.setAttribute('src', `./assets/${linkObj.link}`);
+    } else {
         if (linkObj.link) {
             linksHTML_el[idx].onclick = function () {
                 location.href = linkObj.link;
@@ -339,5 +284,7 @@ link_Arr.forEach((linkObj, idx) => {
         } else {
             linksHTML_el[idx].remove()
         }
+    }
+
 
 })

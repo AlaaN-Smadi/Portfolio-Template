@@ -1,0 +1,101 @@
+[
+    {
+        "head": "Personal",
+        "Name": "Ala'a Al Smadi",
+        "Job": "Full Stack Developer"
+    },
+    {
+        "head": "Contact",
+        "data": [
+            {
+                "Phone": "+xxx-xxxxxxxxxx"
+            },
+            {
+                "Email": "example@example.com"
+            },
+            {
+                "Address": "Country / City"
+            }
+        ]
+    },
+    {
+        "head": "Profile",
+        "data": "I am 24 years old, single Jordanian who is social , ambitious and result oriented . I am ready to face challenges to build great accomplishments in my career .I am hard worker, dynamic and organized person with ability to learn and adopt any environment to achieve my goals , Born in a small town in Northern Jordan, where I study to be a full stack developer for Instant Domain Search, alongside my many ongoing projects. I love to create and tend to keep a few too many projects on the go at a time. I love to travel . I dream of being able to take my work with me while travelling the world. "
+    },
+    {
+        "head": "Experiance",
+        "data": [
+            {
+                "Position": "First Position",
+                "Company": "First Company",
+                "StartDate": "Jan 2020",
+                "EndDate": "Jan 2021",
+                "TechnichalSkills": "First Position Skills",
+                "Description": "First position Description"
+            },
+            {
+                "Position": "Second Position",
+                "Company": "Second Company",
+                "StartDate": "Jan 2020",
+                "EndDate": "Jan 2021",
+                "TechnichalSkills": "Second Position Skills",
+                "Description": "Second position Description"
+            }
+        ]
+    },
+    {
+        "head": "Education",
+        "data": [
+            {
+                "Degree": " First Degree ",
+                "School": "First University",
+                "StartDate": "Jan 2015",
+                "EndDate": "Jan 2020",
+                "TechnichalSkills": "First Degree Skills",
+                "Description": "First Degree Description"
+            },
+            {
+                "Degree": " Second Degree ",
+                "School": "Second University",
+                "StartDate": "Jan 2015",
+                "EndDate": "Jan 2020",
+                "TechnichalSkills": "Second Degree Skills",
+                "Description": "Second Degree Description"
+            }
+        ]
+    },
+    {
+        "head": "Projects",
+        "data": [
+            {
+                "Name": "Project 1",
+                "Image": "./assets/firstFlower.jpg",
+                "Link": "https://alaan-smadi.github.io/portfolio/",
+                "Description": "This is the Description for the first project as you see it will be shown once you hover ..."
+            },
+            {
+                "Name": "Project 2",
+                "Image": "./assets/secondFlower.jpg",
+                "Link": "https://alaan-smadi.github.io/portfolio/",
+                "Description": "This is the Description for the second project as you see it will be shown once you hover ..."
+            }
+        ]
+    },
+    {
+        "head": "Skills",
+        "data": [
+            {
+                "skillName": "skill 100%",
+                "percentage": 100
+            },
+            {
+                "skillName": "skill 67%",
+                "percentage": 67
+            },
+            {
+                "skillName": "skill 35%",
+                "percentage": 35
+            }
+        ]
+    }
+]

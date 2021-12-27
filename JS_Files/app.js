@@ -1,6 +1,7 @@
 'use strict';
 
 
+
 //  Get bar elements 
 let slideBarState = false
 let btn = document.getElementById('bar_btn');
@@ -39,3 +40,18 @@ function showBar() {
 }
 
 
+// Render Bar Data 
+let feild_Ele = document.getElementsByClassName('head_OF_Feilds');
+let bar_Ele = document.getElementsByClassName('bar_Ele');
+
+for(let i=0;i<bar_Ele.length;i++){
+    let bar_Items = document.createElement('div');
+    bar_Items.setAttribute('class', 'bar_Items');
+
+    let aTag = document.createElement('a');
+    aTag.setAttribute('href', `#${bar_Ele[i].id}`)
+    aTag.textContent = feild_Ele[i].innerHTML;
+    bar_Items.appendChild(aTag);
+
+    bar.appendChild(bar_Items);
+}
