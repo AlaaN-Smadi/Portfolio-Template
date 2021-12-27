@@ -3,7 +3,7 @@
 
 ![image](./assets/live_background.png)
 
-[Live Demo](https://alaan-smadi.github.io/portfolio/)
+[Live Demo](https://alaan-smadi.github.io/Portfolio-Template/)
 
 ## Description
 This is HTML based personal resume website template. I have built this by JavaScript (ES6), HTML5 and CSS3, it can be customized and used by anybody simply by filling in their own personal info into the JSON file and the changes will be dynamically fed into the site. If you would like to use this template for your own personal resume website, read on to learn how to build your own copy.

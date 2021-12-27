@@ -18,7 +18,7 @@ let my_Profile = document.getElementById("my_Profile"),
     personal_Job = document.getElementById("personal_Job")
 
 
-    // this array for all data needed to render your portfolio
+// this array for all data needed to render your portfolio
 let myData;
 let myDataJson = './json_files/myData.json';
 
@@ -33,6 +33,14 @@ function readTextFile(file, type) {
             if (rawFile.status === 200 || rawFile.status == 0) {
                 if (type == 'data') {
                     var allText = rawFile.responseText;
+                    allText = allText.replace(/\\n/g, "\\n")
+                        .replace(/\\'/g, "\\'")
+                        .replace(/\\"/g, '\\"')
+                        .replace(/\\&/g, "\\&")
+                        .replace(/\\r/g, "\\r")
+                        .replace(/\\t/g, "\\t")
+                        .replace(/\\b/g, "\\b")
+                        .replace(/\\f/g, "\\f");
                     myData = (JSON.parse(allText));
                 } else if (type == 'links') {
                     var allText = rawFile.responseText;
@@ -91,16 +99,22 @@ myData.forEach(mainFeild => {
                 dataContainer.appendChild(degree);
 
                 // Skills
-                let skills = document.createElement("p");
-                skills.setAttribute("class", "position_Skills");
-                skills.textContent = eduData.TechnichalSkills;
-                dataContainer.appendChild(skills);
+                eduData.TechnichalSkills.split("\n").forEach(edu_Skill => {
+                    let skills = document.createElement("p");
+                    skills.setAttribute("class", "position_Skills");
+                    skills.textContent = edu_Skill;
+                    dataContainer.appendChild(skills);
+                })
+
 
                 // Description
-                let description = document.createElement("p");
-                description.setAttribute("class", "position_Description");
-                description.textContent = eduData.Description;
-                dataContainer.appendChild(description);
+                eduData.Description.split("\n").forEach(edu_Desc => {
+                    let description = document.createElement("p");
+                    description.setAttribute("class", "position_Description");
+                    description.textContent = edu_Desc;
+                    dataContainer.appendChild(description);
+                })
+
 
                 // append it
                 rightDivEdu.appendChild(dataContainer)
@@ -136,16 +150,22 @@ myData.forEach(mainFeild => {
                 dataContainer.appendChild(position);
 
                 // Skills
-                let skills = document.createElement("p");
-                skills.setAttribute("class", "position_Skills");
-                skills.textContent = expData.TechnichalSkills;
-                dataContainer.appendChild(skills);
+                expData.TechnichalSkills.split("\n").forEach(tech_Skill => {
+                    let skills = document.createElement("p");
+                    skills.setAttribute("class", "position_Skills");
+                    skills.textContent = tech_Skill;
+                    dataContainer.appendChild(skills);
+                })
+
 
                 // Description
-                let description = document.createElement("p");
-                description.setAttribute("class", "position_Description");
-                description.textContent = expData.Description;
-                dataContainer.appendChild(description);
+                expData.Description.split("\n").forEach(desc => {
+                    let description = document.createElement("p");
+                    description.setAttribute("class", "position_Description");
+                    description.textContent = desc;
+                    dataContainer.appendChild(description);
+                })
+
 
                 // append it
                 rightDivExp.appendChild(dataContainer)
